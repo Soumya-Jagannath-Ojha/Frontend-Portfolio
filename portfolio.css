@@ -15,6 +15,9 @@
   --third-color: rgb(192, 166, 49);
   --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   background: var(--body-color);
 }
