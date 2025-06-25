@@ -5,8 +5,6 @@ This is a simple and responsive **Portfolio Website** built using **HTML** and *
 ---
 
 
----
-
 ## 🚀 Features
 
 - Clean and professional UI
