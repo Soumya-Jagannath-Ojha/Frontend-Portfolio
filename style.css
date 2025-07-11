@@ -9,13 +9,13 @@
   --color-white: rgb(255, 255, 255);
   --text-color-second: rgb(68, 68, 68);
   --text-color-third: rgb(30, 159, 171);
-  --first-color: rgb(110, 87, 224);
+  --first-color: rgb(179, 55, 232);
   --first-color-hover: rgb(40, 91, 212);
   --second-color: rgb(0, 201, 255);
   --third-color: rgb(192, 166, 49);
   --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -93,7 +93,6 @@ nav {
   justify-content: center;
 }
 
-.nav-button,
 .btn {
   font-weight: 500;
   padding: 12px 20px;
@@ -102,6 +101,11 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.4s;
+}
+
+.btn:hover {
+  background: var(--second-color);
+  color: var(--color-white);
 }
 
 .btn > i {
@@ -147,6 +151,11 @@ i {
   color: var(--text-color-second);
   margin-block: 20px;
 }
+
+.featured-text-btn > .blue-btn:hover {
+  background: var(--first-color-hover);
+}
+
 .typedText {
   text-wrap: nowrape;
   text-transform: capitalize;
@@ -190,6 +199,9 @@ i {
   border-radius: 50%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+.icon:hover {
+  color: var(--first-color);
 }
 
 /* Featured Right Section */
@@ -354,6 +366,29 @@ h3 {
   color: rgb(0, 181, 231);
   margin-bottom: 25px;
 }
+
+.project-box::after,
+.contact-info::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  background: var(--second-color);
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  z-index: 1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after {
+  bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box > h3,
+.project-box:hover.project-box > p {
+  color: var(--color-white);
+  z-index: 2;
+}
+
 h3 {
   font-size: 20px;
   font-weight: 600;
@@ -377,7 +412,7 @@ h3 {
   align-items: center;
   width: 100%;
   height: 315px;
-  box-shadow: 1px 8px 10px 2px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   padding: 20px 30px;
   background: var(--second-color);
   border-radius: 10px;
@@ -393,6 +428,15 @@ h3 {
   gap: 10px;
   color: var(--color-white);
   margin-block: 5px;
+}
+.contact-info::after {
+  background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i {
+  color: #777;
+  z-index: 2;
 }
 
 .form-control {
@@ -437,6 +481,11 @@ textarea {
   font-size: 18px;
 }
 
+.form-button > .btn:hover {
+  background: #00b5e7;
+}
+
+/* --------- FOOTER BOX ----------- */
 footer {
   display: flex;
   flex-direction: column;
@@ -480,7 +529,7 @@ footer {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-.bottom-footer{
+.bottom-footer {
   font-size: 14px;
   margin-top: 10px;
 }
